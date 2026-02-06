@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DailyHelpIndia - Jobs, Tools & Study Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+content="DailyHelpIndia provides jobs updates, online tools, study materials and daily useful services.">
+<meta name="keywords"
+content="govt jobs, online tools, study notes, calculators, india portal">
+<!-- ADSENSE SCRIPT (ADD AFTER APPROVAL) -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#f5f5f5;
+}
+header{
+background:#1565c0;
+color:white;
+padding:15px;
+text-align:center;
+font-size:24px;
+}
+nav{
+background:#0d47a1;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+nav a{
+color:white;
+padding:12px 15px;
+text-decoration:none;
+}
+nav a:hover{
+background:#1976d2;
+}
+.container{
+max-width:1100px;
+margin:auto;
+padding:10px;
+}
+.card{
+background:white;
+margin:10px 0;
+padding:15px;
+border-radius:6px;
+box-shadow:0 0 5px #aaa;
+}
+.tool input, .tool button{
+width:100%;
+padding:8px;
+margin:5px 0;
+}
+.tool button{
+background:#1976d2;
+color:white;
+border:none;
+}
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:10px;
+}
+</style>
+</head>
+<body>
+<header>DailyHelpIndia 🇮🇳</header>
+<nav>
+<a href="#jobs">Jobs</a>
+<a href="#tools">Tools</a>
+<a href="#study">Study</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="container">
+<!-- ADS PLACE -->
+<div style="text-align:center;margin:15px;">
+<!-- ADSENSE CODE HERE -->
+</div>
+<section id="jobs" class="card">
+<h2>📢 Latest Jobs</h2>
+<ul>
+<li>SSC GD Constable 2026 - Apply Now</li>
+<li>Railway Group D Vacancy</li>
+<li>Assam Govt Recruitment</li>
+<li>Indian Army Rally</li>
+</ul>
+</section>
+<section id="tools" class="card tool">
+<h2>🛠 Online Tools</h2>
+<h4>EMI Calculator</h4>
+<input id="p" placeholder="Loan Amount ₹">
+<input id="r" placeholder="Interest %">
+<input id="t" placeholder="Months">
+<button onclick="emi()">Calculate EMI</button>
+<p id="emiResult"></p>
+<hr>
+<h4>BMI Calculator</h4>
+<input id="w" placeholder="Weight kg">
+<input id="h" placeholder="Height cm">
+<button onclick="bmi()">Check BMI</button>
+<p id="bmiResult"></p>
+</section>
+<section id="study" class="card">
+<h2>📚 Study Materials</h2>
+<ul>
+<li>Class 10 Notes PDF</li>
+<li>Class 12 Science Notes</li>
+<li>Competitive Exam MCQ</li>
+<li>English Grammar Guide</li>
+</ul>
+</section>
+<section id="contact" class="card">
+<h2>📞 Contact Us</h2>
+<p>Email: dailyhelpindia@gmail.com</p>
+<p>Telegram: @dailyhelpindia</p>
+</section>
+</div>
+<footer>
+© 2026 DailyHelpIndia | All Rights Reserved
+</footer>
+<script>
+function emi(){
+var p=document.getElementById("p").value;
+var r=document.getElementById("r").value/1200;
+var t=document.getElementById("t").value;
+var emi=(p*r*Math.pow(1+r,t))/(Math.pow(1+r,t)-1);
+document.getElementById("emiResult").innerHTML=
+"Monthly EMI = ₹"+Math.round(emi);
+}
+function bmi(){
+var w=document.getElementById("w").value;
+var h=document.getElementById("h").value/100;
+var bmi=w/(h*h);
+document.getElementById("bmiResult").innerHTML=
+"Your BMI = "+bmi.toFixed(2);
+}
+</script>
+</body>
+</html>
